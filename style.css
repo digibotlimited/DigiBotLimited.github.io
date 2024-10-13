@@ -1,0 +1,152 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.light {
+    background-color: #f4f4f4;
+    color: #121212;
+}
+
+header {
+    background: #1f1f1f;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://media.giphy.com/media/26n6WywJyh39n1pBu/giphy.gif') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: #ff4c68;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    background-color: #ff4c68;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#about, #services, #contact {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex-basis: 30%;
+    background-color: #1f1f1f;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f4f4f4;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    color: white;
+    margin-top: 2rem;
+}
+
+.theme-switcher {
+    background-color: #ff4c68;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+body.light header {
+    background-color: #f4f4f4;
+    color: #121212;
+}
+
+body.light .nav-links a, body.light footer {
+    color: #121212;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .service {
+        flex-basis: 100%;
+    }
+}
